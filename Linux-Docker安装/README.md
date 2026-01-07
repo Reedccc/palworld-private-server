@@ -74,7 +74,7 @@ services:
       - palworld-server-wine
      networks:  # 新增：和游戏服务器同一网络
       - palworld-network
-# 新增：自定义网络（关键）
+# 新增：自定义网络
 networks:
   palworld-network:
     driver: bridge
@@ -94,6 +94,7 @@ chown -R 1000:1000 ./PalDefender
 
 ## 运行
 docker compose up -d
+
 
 
 
