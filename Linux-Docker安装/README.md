@@ -70,5 +70,17 @@ services:
      depends_on:
       - palworld-server-wine
 ~~~
-1
+## 运行前准备
+~~~ bash
+mkdir pserver
+cd pserver
+vim docker-compose.yml # 把上面内容复制进去
+mkdir palworld
+mkdir PalDefender
+mkdir backups
+chown -R 1000:1000 ./palworld
+chown -R 1000:1000 ./PalDefender
+~~~
 
+## 运行
+docker compose up -d
