@@ -82,10 +82,11 @@ chown -R 1000:1000 ./PalDefender
 ## 运行
 docker compose up -d
 
-## 未开启RestfulAPI，在compose中指定参数不生效，需要自行修改配置文件。然后重启服务
+## 未开启RestfulAPI，在compose中指定参数不生效，需要自行修改配置文件。然后重启服务。如果有其他参数需要另行修改，也遵循此操作。
 vim /path/to/pserver/palworld/Config/WindowsServer/PalWorldSettings.ini  #修改RESTAPIEnabled=True
 docker compose down
 docker compose up -d
+
 
 
 
