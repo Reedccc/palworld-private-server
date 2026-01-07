@@ -1,6 +1,6 @@
 # 感谢灰灰大佬提供的镜像
 
-需要安装两个Docker镜像，第一个是装了帕鲁服务 + PalDefender插件的镜像，第二个是服务端管理工具的镜像。
+需要安装两个Docker镜像，第一个是装了帕鲁服务 + PalDefender插件的镜像，第二个是服务端管理工具的镜像。  
 PalDefender插件提供的命令清单：https://ultimeit.github.io/PalDefender/zh/Commands/
 
 ## 拉取镜像
@@ -85,4 +85,5 @@ chown -R 1000:1000 ./PalDefender
 
 ## 运行
 docker compose up -d
+
 
