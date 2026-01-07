@@ -35,17 +35,10 @@ services:
         - 25575:25575
         - 8212:8212/tcp
       environment:
-         - PORT=8211 # Optional but recommended
-         - PLAYERS=16 # Optional but recommended
-         - SERVER_PASSWORD= # Optional but recommended
-         - MULTITHREADING=true
-         - RCON_ENABLED=true
-         - RCON_PORT=25575
          - TZ=Asia/Shanghai
+         - PORT=8211 # Optional but recommended
+         - MULTITHREADING=true
          - ADMIN_PASSWORD=hahaha
-         - COMMUNITY=false  # Enable this if you want your server to show up in the community servers tab, USE WITH SERVER_PASSWORD!
-         - SERVER_NAME=
-         - SERVER_DESCRIPTION=
          - ENABLE_MULTITHREAD=true  # enable multithreading
       volumes:
          - ./palworld:/home/wineuser/.wine/drive_c/Steam/steamapps/common/PalServer/Pal/Saved
@@ -82,7 +75,6 @@ cd pserver
 vim docker-compose.yml # 把上面内容复制进去
 mkdir palworld
 mkdir PalDefender
-mkdir backups
 chown -R 1000:1000 ./palworld
 chown -R 1000:1000 ./PalDefender
 ~~~
@@ -94,6 +86,7 @@ docker compose up -d
 vim /path/to/pserver/palworld/Config/WindowsServer/PalWorldSettings.ini  #修改RESTAPIEnabled=True
 docker compose down
 docker compose up -d
+
 
 
 
