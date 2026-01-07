@@ -57,7 +57,7 @@ services:
      container_name: palworld-server-tool
      restart: unless-stopped
      ports:
-       - "8802:8080"  # Web管理界面端口
+       - "8805:8080"  # Web管理界面端口
      volumes:
        - ./palworld:/game  # 挂载游戏数据目录
        - ./backups:/app/backups  # 挂载备份目录
@@ -90,6 +90,7 @@ chown -R 1000:1000 ./PalDefender
 
 ## 运行
 docker compose up -d
+
 
 
 
