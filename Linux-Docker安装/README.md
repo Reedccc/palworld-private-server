@@ -41,7 +41,7 @@ services:
          - MULTITHREADING=true
          - RCON_ENABLED=true
          - RCON_PORT=25575
-         - TZ=UTC
+         - TZ=Asia/Shanghai
          - ADMIN_PASSWORD=hahaha
          - COMMUNITY=false  # Enable this if you want your server to show up in the community servers tab, USE WITH SERVER_PASSWORD!
          - SERVER_NAME=
@@ -50,8 +50,7 @@ services:
       volumes:
          - ./palworld:/home/wineuser/.wine/drive_c/Steam/steamapps/common/PalServer/Pal/Saved
          - ./PalDefender:/home/wineuser/.wine/drive_c/Steam/steamapps/common/PalServer/Pal/Binaries/Win64/PalDefender
-      networks:  # 新增：和游戏服务器同一网络
-         - palworld-network
+
    palworld-server-tool:
      image: pserver-docker-tool:latest
      container_name: palworld-server-tool
@@ -62,6 +61,7 @@ services:
        - ./palworld:/game  # 挂载游戏数据目录
        - ./backups:/app/backups  # 挂载备份目录
      environment:
+       - TZ=Asia/Shanghai
        - WEB__PASSWORD=hahaha
        - RCON__ADDRESS=palworld-server-wine:25575
        - RCON__PASSWORD=hahaha  #服务器配置文件中的 AdminPassword
@@ -72,12 +72,7 @@ services:
        - TASK__PLAYER_LOGGING=true
      depends_on:
       - palworld-server-wine
-     networks:  # 新增：和游戏服务器同一网络
-      - palworld-network
-# 新增：自定义网络
-networks:
-  palworld-network:
-    driver: bridge
+
 
 ~~~
 ## 运行前准备
@@ -94,6 +89,7 @@ chown -R 1000:1000 ./PalDefender
 
 ## 运行
 docker compose up -d
+
 
 
 
