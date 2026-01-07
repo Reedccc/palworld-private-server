@@ -50,6 +50,8 @@ services:
       volumes:
          - ./palworld:/home/wineuser/.wine/drive_c/Steam/steamapps/common/PalServer/Pal/Saved
          - ./PalDefender:/home/wineuser/.wine/drive_c/Steam/steamapps/common/PalServer/Pal/Binaries/Win64/PalDefender
+      networks:  # 新增：和游戏服务器同一网络
+         - palworld-network
    palworld-server-tool:
      image: pserver-docker-tool:latest
      container_name: palworld-server-tool
@@ -70,6 +72,13 @@ services:
        - TASK__PLAYER_LOGGING=true
      depends_on:
       - palworld-server-wine
+     networks:  # 新增：和游戏服务器同一网络
+      - palworld-network
+# 新增：自定义网络（关键）
+networks:
+  palworld-network:
+    driver: bridge
+
 ~~~
 ## 运行前准备
 ~~~ bash
@@ -85,5 +94,6 @@ chown -R 1000:1000 ./PalDefender
 
 ## 运行
 docker compose up -d
+
 
 
