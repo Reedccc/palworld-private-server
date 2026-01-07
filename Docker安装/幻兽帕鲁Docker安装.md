@@ -70,5 +70,5 @@ services:
      depends_on:
       - palworld-server-wine
 ~~~
-
+1
 
