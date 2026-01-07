@@ -1,28 +1,25 @@
-
+# 感谢灰灰大佬提供的镜像
 
 需要安装两个Docker镜像，第一个是装了帕鲁服务+mod的镜像，第二个是服务端管理工具的镜像。
 
-第一步：拉取镜像
+## 拉取镜像
 
 docker pull swr.cn-north-4.myhuaweicloud.com/huihui-cloud/palworld-docker-wine:latest
 
 docker pull swr.cn-north-4.myhuaweicloud.com/huihui-cloud/palworld-docker-tool:latest
 
+## 重命名
 docker tag swr.cn-north-4.myhuaweicloud.com/huihui-cloud/palworld-docker-wine:latest pserver-docker-wine:latest
 
 docker tag swr.cn-north-4.myhuaweicloud.com/huihui-cloud/palworld-docker-tool:latest pserver-docker-tool:latest
 
-
-
-保存镜像文件，以备后用
+## 保存镜像文件，以备后用
 
 docker save -o palworld-server-docker.tar  pserver-docker-wine:latest
 
 docker save -o palworld-manage-tool-docker.tar  pserver-docker-tool:latest
 
-第二步：启动镜像
-
-docker-compose.yml文件内容如下，
+## docker-compose.yml文件内容如下
 
 ~~~ yaml
 services:
@@ -73,4 +70,5 @@ services:
      depends_on:
       - palworld-server-wine
 ~~~
+
 
