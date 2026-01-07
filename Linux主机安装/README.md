@@ -190,15 +190,15 @@ manage:
 
 ## 使用Rcon执行命令
 
-使用rcon执行命令，无需登录游戏即可执行管理员命令，命令清单：
+使用rcon执行命令，无需登录游戏即可执行管理员命令，命令清单。命令同附3 游戏内管理员操作
 
 
 
-
-附5 安装mod
+## 附5 安装mod
 
 Linux服务器不能安装windows版本的mod，例如https://github.com/Ultimeit/PalDefender。
 帕鲁的mod很多都是仅支持windows。如果希望支持mod，可以参考Linux-Docker安装方式（docker中装了wine）
+
 
 
 
