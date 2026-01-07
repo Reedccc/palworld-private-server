@@ -64,7 +64,7 @@ nohup ./PalServer.sh -port=8805 > pal_server.log 2>&1 &  //用8805端口启动�
 
 参数对应关系如图：
 
-![img](https://i2.hdslb.com/bfs/new_dyn/344ed05e9002271d921ba5121f572b0e520788157.png@1192w.webp)
+![img](https://github.com/Reedccc/palworld-private-server/blob/main/images/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%82%E6%95%B0.png)
 
 
 
@@ -204,4 +204,5 @@ OptionSettings=(Difficulty=None,RandomizerType=None,RandomizerSeed="",bIsRandomi
 由于不能安装windows版本的mod：https://github.com/Ultimeit/PalDefender
 
 所以准备用docker重装服务器
+
 
