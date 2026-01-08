@@ -64,7 +64,7 @@ nohup ./PalServer.sh -port=8805 > pal_server.log 2>&1 &  //用8805端口启动�
 
 参数对应关系如图：
 
-![img](https://github.com/Reedccc/palworld-private-server/blob/main/images/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%82%E6%95%B0.png)
+![img](../images/%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%82%E6%95%B0.png)
 
 
 
